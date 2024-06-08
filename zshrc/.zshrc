@@ -1,6 +1,9 @@
 
 export NVIM_CONFIG_DIR=~/.config/nvim/
 
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US:en
+export LC_ALL=en_US.UTF-8
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -134,3 +137,20 @@ gitdir() {
 #lsa() {
 #  ls -a
 #}
+
+make_venv() {
+  if [ -d venv ]; then
+    echo "Virtual env. 'venv' already exists."
+    return 1
+  fi
+
+  python3 -m venv venv
+  source venv/bin/activate
+}
+
+
+
+export PATH=$PATH:/Users/yashwanthkaruparthi/.spicetify
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US:en
+export LC_ALL=en_US.UTF-8
